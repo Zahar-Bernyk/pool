@@ -1,0 +1,100 @@
+:root {
+  /* Шрифти (підключені через <link> у layout.tsx).
+     Manrope замість Jost — бо Jost не має кириличних гліфів. */
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-jost: 'Manrope', 'Jost', system-ui, sans-serif;
+
+  /* Поверхні */
+  --bg: #FBFAF6;
+  --surface: #FFFFFF;
+  --card-border: #EFE9DD;
+  --field-bg: #FBF8F3;
+  --field-border: #E0D6C8;
+
+  /* Текст */
+  --ink: #2E2A24;
+  --ink-soft: #3A322A;
+  --muted: #9A8C7B;
+  --secondary: #6E6253;
+  --divider: #F2EBE0;
+
+  /* Елементи керування */
+  --toggle-bg: #F2ECE0;
+  --toggle-border: #E6DCCB;
+  --inactive: #ECE4D6;
+  --btn-border: #DECFBC;
+
+  /* Карта */
+  --spot-available-border: #C9B89F;
+  --spot-selected: #2E2A24;
+  --spot-booked: #E8E1D5;
+  --spot-booked-text: #9A8E7E;
+  --spot-blocked: #C7B0A3;
+
+  /* Акценти */
+  --weekend: #B5985A;
+  --free-kids: #7FA88C;
+  --privat-1: #3B9B4E;
+  --privat-2: #2E7E5E;
+  --privat-pay: #3B9B4E;
+  --privat-processing: #7FB08A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink-soft);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdbfad;
+  border-radius: 6px;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Видимий фокус для доступності */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
