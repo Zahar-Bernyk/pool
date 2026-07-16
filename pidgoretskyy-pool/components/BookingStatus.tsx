@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { SERIF, SANS } from '@/lib/ui';
 
-/** Читає глобальний статус бронювання. open=true поки не завантажилось (щоб не блимало). */
+/** Читає глобальний статус бронювання. open=true поки  не завантажилось (щоб не блимало). */
 export function useBookingsOpen() {
   const [open, setOpen] = useState(true);
   const [note, setNote] = useState<string | null>(null);
