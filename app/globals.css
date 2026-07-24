@@ -1,0 +1,105 @@
+:root {
+  /* Шрифти (підключені через <link> у layout.tsx).
+     Manrope замість Jost — бо Jost не має кириличних гліфів. */
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-jost: 'Manrope', 'Jost', system-ui, sans-serif;
+
+  /* Поверхні */
+  --bg: #FFFFFF;
+  --surface: #FFFFFF;
+  --card-border: #E8E8ED;
+  --field-bg: #F5F5F7;
+  --field-border: #D2D2D7;
+
+  /* Текст */
+  --ink: #1D1D1F;
+  --ink-soft: #1D1D1F;
+  --muted: #86868B;
+  --secondary: #6E6E73;
+  --divider: #E8E8ED;
+
+  /* Елементи керування */
+  --toggle-bg: #F5F5F7;
+  --toggle-border: #E8E8ED;
+  --inactive: #E8E8ED;
+  --btn-border: #D2D2D7;
+
+  /* Карта */
+  --spot-available-border: #D2D2D7;
+  --spot-selected: #1D1D1F;
+  --spot-booked: #E8E8ED;
+  --spot-booked-text: #86868B;
+  --spot-blocked: #C7C7CC;
+
+  /* Акценти */
+  --weekend: #6E6E73;
+  --free-kids: #6E6E73;
+  --privat-1: #3B9B4E;
+  --privat-2: #2E7E5E;
+  --privat-pay: #3B9B4E;
+  --privat-processing: #7FB08A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink-soft);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Запобігаємо горизонтальній прокрутці на мобільних (не ламає sticky-шапку) */
+body {
+  overflow-x: hidden;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: #D2D2D7;
+  border-radius: 6px;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Видимий фокус для доступності */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
