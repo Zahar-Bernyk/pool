@@ -619,6 +619,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
     gap: var(--gap);
     align-items: start;
 }
+.palace-text h2,
 .palace-text h3 {
     font-family: var(--font-display);
     font-size: 28px;
@@ -626,6 +627,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
     margin-bottom: 16px;
     margin-top: 32px;
 }
+.palace-text h2:first-child,
 .palace-text h3:first-child { margin-top: 0; }
 .palace-text p {
     font-size: 15px;
